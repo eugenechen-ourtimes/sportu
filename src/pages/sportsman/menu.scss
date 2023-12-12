@@ -1,0 +1,57 @@
+@import "../../_variables.scss";
+
+$item-width: 100%;
+$item-height: 6%;
+$item-font-size: 20px;
+$item-color: $secondary-color;
+$item-border-width: 1.5px;
+$item-border-style: solid;
+$item-border-color: $secondary-color;
+
+.sportsman-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90vw;
+    height: 100vh;
+    background-color: $sportsman-background-color;
+}
+
+.sportsman-menu-cancel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: $menu-cancel-height;
+    height: $menu-cancel-height;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sportsman-menu-space-1 {
+    height: 16%;
+    border-bottom: $item-border-width $item-border-style $item-border-color;
+}
+
+.sportsman-menu-show-home-page,
+.sportsman-menu-reserve-now,
+.sportsman-menu-matching-status,
+.sportsman-menu-court-list,
+.sportsman-menu-sign-in,
+.sportsman-menu-log-out {
+    width: $item-width;
+    height: $item-height;
+    font-size: $item-font-size;
+    color: $item-color;
+    background-color: transparent;
+    border-top: none;
+    border-right: $item-border-width $item-border-style $item-border-color;
+    border-bottom: $item-border-width $item-border-style $item-border-color;
+    border-left: $item-border-width $item-border-style $item-border-color;
+}
+
+@media (min-width: $pc-min-width) {
+    .sportsman-menu {
+        width: calc(0.9 * $pc-display-size);
+    }
+}

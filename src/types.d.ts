@@ -1,5 +1,5 @@
 
-type PageName =
+type SportsmanPageName =
     "home" |
     "reservation" | "reservation-court-list" |
     "matching-status" |

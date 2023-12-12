@@ -1,9 +1,8 @@
+import Pager2 from "../Pager2";
 
 const HomePage = () => {
     return (
-        <div>
-            HomePage
-        </div>
+        <Pager2 page="home"/>
     );
 };
 
