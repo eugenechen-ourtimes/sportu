@@ -5,6 +5,7 @@ import {
 } from "react-router-dom";
 
 import LoginPage from "./pages/sportsman/login/LoginPage";
+import LoggingInPage from "./pages/sportsman/login/LoggingInPage";
 import RegistrationPage from "./pages/sportsman/registration/RegistrationPage";
 import RegistrationSuccessPage from "./pages/sportsman/registration/RegistrationSuccessPage";
 import HomePage from "./pages/sportsman/home/HomePage";
@@ -30,6 +31,10 @@ const Sportu = () => {
                 <Route
                     path="/login"
                     element={<LoginPage/>}
+                />
+                <Route
+                    path="/callback"
+                    element={<LoggingInPage/>}
                 />
                 <Route
                     path="/registration"

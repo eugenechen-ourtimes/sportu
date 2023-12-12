@@ -1,57 +1,66 @@
 @import "../../../_variables.scss";
 
-.sportsman-login-page {
+.sportsman-pager-1 {
     width: 100vw;
     height: 100vh;
     background-color: $sportsman-background-color;
 }
 
-.sportsman-login-page-space-1 {
+.sportsman-pager-1-space-1 {
     height: 10.5%;
 }
 
-.sportsman-login-page-space-2 {
+.sportsman-pager-1-space-2 {
     height: 6%;
 }
 
-.sportsman-login-page-space-3 {
+.sportsman-pager-1-space-3 {
     height: 5%;
 }
 
-.sportsman-login-page-space-4 {
+.sportsman-pager-1-space-4 {
     height: 2%;
 }
 
-.sportsman-login-page-logo {
+.sportsman-pager-1-logo {
     display: block;
     margin: auto;
     height: 10%;
 }
 
-.sportsman-login-page-runner {
+.sportsman-pager-1-runner {
     display: block;
     margin: auto;
     height: 33%;
 }
 
-.sportsman-login-page-log-in {
-    display: block;
-    margin: auto;
-    width: 60%;
+.sportsman-pager-1-log-in-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 6%;
+}
+
+.sportsman-pager-1-log-in {
+    width: 60%;
+    height: 100%;
     font-size: 16px;
     font-weight: bold;
     background-color: $primary-color;
 }
 
-.sportsman-login-page-court-provider-login {
+.sportsman-pager-1-logging-in {
+    color: $normal-text-color;
+}
+
+.sportsman-pager-1-court-provider-login {
     font-size: 16px;
     text-align: center;
     color: $secondary-color;
 }
 
 @media (min-width: $pc-min-width) {
-    .sportsman-login-page {
+    .sportsman-pager-1 {
         margin: auto;
         width: $pc-display-size;
     }
