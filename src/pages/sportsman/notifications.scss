@@ -1,0 +1,39 @@
+@import "../../_variables.scss";
+
+.sportsman-notifications {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 90vw;
+    height: 100vh;
+    background-color: $sportsman-background-color;
+}
+
+.sportsman-notifications-cancel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: $notification-cancel-height;
+    height: $notification-cancel-height;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sportsman-notifications-space-1 {
+    height: 12%;
+}
+
+.sportsman-notifications-notification-item {
+    margin: 0 12px;
+    padding: 10px 0;
+    font-size: 16px;
+    color: $notification-item-text-color;
+    border-bottom: 1px dashed $notification-item-border-color;
+}
+
+@media (min-width: $pc-min-width) {
+    .sportsman-notifications {
+        width: calc(0.9 * $pc-display-size);
+    }
+}

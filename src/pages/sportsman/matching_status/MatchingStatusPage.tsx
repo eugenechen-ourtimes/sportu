@@ -1,9 +1,8 @@
+import Pager2 from "../Pager2";
 
 const MatchingStatusPage = () => {
     return (
-        <div>
-            MatchingStatusPage
-        </div>
+        <Pager2 page="matching-status"/>
     );
 };
 

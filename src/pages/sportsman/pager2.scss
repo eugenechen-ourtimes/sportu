@@ -1,0 +1,17 @@
+@import "../../_variables.scss";
+
+.sportsman-pager-2 {
+    overflow: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+@media (min-width: $pc-min-width) {
+    .sportsman-pager-2 {
+        left: calc(50vw - $pc-display-size / 2);
+        width: $pc-display-size;
+    }
+}

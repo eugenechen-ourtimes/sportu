@@ -1,9 +1,8 @@
+import Pager2 from "../Pager2";
 
 const SignInPage = () => {
     return (
-        <div>
-            SignInPage
-        </div>
+        <Pager2 page="sign-in"/>
     );
 };
 

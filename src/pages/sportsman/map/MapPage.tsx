@@ -1,9 +1,8 @@
+import Pager2 from "../Pager2";
 
 const MapPage = () => {
     return (
-        <div>
-            MapPage
-        </div>
+        <Pager2 page="map"/>
     );
 };
 

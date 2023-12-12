@@ -1,9 +1,8 @@
+import Pager2 from "../Pager2";
 
 const CourtListPage = () => {
     return (
-        <div>
-            CourtListPage
-        </div>
+        <Pager2 page="court-list"/>
     );
 };
 
