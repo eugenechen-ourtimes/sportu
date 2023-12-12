@@ -5,56 +5,36 @@ const LoginPage = () => {
         window.location.href = "http://localhost:3000/home";
     };
 
+    const handleProviderLogin = () => {
+        window.location.href = "http://localhost:3000/provider-login";
+    };
+
     return (
-        <div className="login-page">
-            <div className="login-page-space1"/>
+        <div className="sportsman-login-page">
+            <div className="sportsman-login-page-space-1"/>
             <img
-                className="login-page-logo"
+                className="sportsman-login-page-logo"
                 src={require("../../../assets/images/logo.png")}
                 alt="SPORTU"
             />
-            <div className="login-page-space2"/>
+            <div className="sportsman-login-page-space-2"/>
             <img
-                className="login-page-runner"
+                className="sportsman-login-page-runner"
                 src={require("../../../assets/images/runner.jpg")}
                 alt="一起運動"
             />
-            <div className="login-page-space3"/>
-            <input
-                className="login-page-email"
-                type="text"
-                placeholder="電子信箱"
-            />
-            <div className="login-page-space4"/>
-            <input
-                className="login-page-password"
-                type="password"
-                placeholder="密碼"
-            />
-            <div className="login-page-space5"/>
+            <div className="sportsman-login-page-space-3"/>
             <button
-                className="login-page-log-in"
+                className="sportsman-login-page-log-in"
                 type="button"
                 onClick={handleLogin}
             >
                 登入
             </button>
-            <div className="login-page-space6"/>
-            <div className="login-page-register-text">
-                <span>
-                    還沒有帳號?&ensp;
-                </span>
-                <span
-                    className="login-page-register-link"
-                    onClick={() => {}}
-                >
-                    立即註冊
-                </span>
-            </div>
-            <div className="login-page-space7"/>
+            <div className="sportsman-login-page-space-4"/>
             <div
-                className="login-page-court-provider-login"
-                onClick={() => {}}
+                className="sportsman-login-page-court-provider-login"
+                onClick={handleProviderLogin}
             >
                 我是廠商
             </div>
