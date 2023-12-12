@@ -1,0 +1,68 @@
+@import "../../../_variables.scss";
+
+.sportsman-pager-1 {
+    width: 100vw;
+    height: 100vh;
+    background-color: $sportsman-background-color;
+}
+
+.sportsman-pager-1-space-1 {
+    height: 10.5%;
+}
+
+.sportsman-pager-1-space-2 {
+    height: 6%;
+}
+
+.sportsman-pager-1-space-3 {
+    height: 5%;
+}
+
+.sportsman-pager-1-space-4 {
+    height: 2%;
+}
+
+.sportsman-pager-1-logo {
+    display: block;
+    margin: auto;
+    height: 10%;
+}
+
+.sportsman-pager-1-runner {
+    display: block;
+    margin: auto;
+    height: 33%;
+}
+
+.sportsman-pager-1-log-in-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 6%;
+}
+
+.sportsman-pager-1-log-in {
+    width: 60%;
+    height: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: $primary-color;
+}
+
+.sportsman-pager-1-logging-in {
+    color: $normal-text-color;
+}
+
+.sportsman-pager-1-court-provider-login {
+    font-size: 16px;
+    text-align: center;
+    color: $secondary-color;
+}
+
+@media (min-width: $pc-min-width) {
+    .sportsman-pager-1 {
+        margin: auto;
+        width: $pc-display-size;
+    }
+}
