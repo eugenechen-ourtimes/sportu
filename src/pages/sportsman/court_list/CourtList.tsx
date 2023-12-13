@@ -34,13 +34,16 @@ const CourtList = () => {
                         羽球場
                     </div>
                     <div className="sportsman-court-list-card-space-3"/>
-                    <div className="sportsman-court-list-card-details">
+                    <button
+                        className="sportsman-court-list-card-details"
+                        type="button"
+                    >
                         詳細資訊
-                    </div>
+                    </button>
                 </div>
                 <div className="sportsman-court-list-card-bottom">
                     <div className="sportsman-court-list-card-court-name">
-                        臺灣大學中央籃球場
+                        臺灣大學醉月湖湖心亭單挑
                     </div>
                     <div className="sportsman-court-list-card-distance">
                         距離300公尺
