@@ -23,7 +23,7 @@ const LoggingInPage = () => {
                     console.log(err);
                 });
         }
-    }, [location]);
+    });
 
     return (
         <Pager1 isLoggingIn={true}/>

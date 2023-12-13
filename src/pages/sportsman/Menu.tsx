@@ -67,7 +67,7 @@ const Menu = (props: MenuProps) => {
                 報到
             </button>
             <button
-                className="sportsman-menu-log-out"
+                className="sportsman-menu-logout"
                 onClick={handleLogout}
             >
                 登出

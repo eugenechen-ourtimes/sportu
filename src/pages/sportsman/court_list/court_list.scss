@@ -1,0 +1,124 @@
+@import "../../../_variables.scss";
+
+.sportsman-court-list {
+    width: 100%;
+    height: 92vh;
+    background-color: $sportsman-background-color;
+}
+
+.sportsman-court-list-title {
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    text-align: center;
+    color: $primary-color;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.sportsman-court-list-card {
+    margin: auto;
+    width: 90%;
+    border: 2px solid $card-border-color;
+    border-radius: 20px;
+}
+
+.sportsman-court-list-card-court-image {
+    display: block;
+    margin: 1.5vh auto;
+    width: 90%;
+    border: 1px solid $card-border-color;
+    border-radius: 12px;
+}
+
+.sportsman-court-list-card-middle {
+    width: 100%;
+    height: 4vh;
+    font-size: 12px;
+}
+
+.sportsman-court-list-card-space-1 {
+    float: left;
+    width: 5%;
+    height: 100%;
+}
+
+.sportsman-court-list-card-space-2 {
+    float: left;
+    width: 5%;
+    height: 100%;
+}
+
+.sportsman-court-list-card-space-3 {
+    float: left;
+    width: 5%;
+    height: 100%;
+}
+
+.sportsman-court-list-card-num-users {
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35%;
+    height: 100%;
+    color: $secondary-color;
+    background-color: $card-num-users-background-color;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.sportsman-court-list-card-ball-type {
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    height: 100%;
+    color: $secondary-color;
+    background-color: $card-ball-type-background-color;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.sportsman-court-list-card-details {
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    height: 100%;
+    color: black;
+    background-color: $primary-color;
+    border: 1px solid black;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.sportsman-court-list-card-bottom {
+    width: 100%;
+    height: 6vh;
+}
+
+.sportsman-court-list-card-court-name {
+    float: left;
+    margin-left: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55%;
+    height: 100%;
+    color: $secondary-color;
+    font-size: 20px;
+}
+
+.sportsman-court-list-card-distance {
+    float: right;
+    margin-right: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 100%;
+    color: $secondary-color;
+    font-size: 16px;
+}

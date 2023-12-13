@@ -11,21 +11,17 @@ $danger: #aa2929;
 $warning: #f7ff00;
 $disabled: #707070;
 
-// ======================================
-// _sizes.scss
-// ======================================
+
 $pc-min-width: 1025px;
 $pc-display-size: 285px;
 
-// ======================================
-// _background_colors.scss
-// ======================================
-$sportsman-background-color: $dark;
-$court-provider-background-color: #c4e1ff;
 
-// ======================================
-// sportsman\_colors.scss
-// ======================================
+$sportsman-background-color: $dark;
+$provider-background-color: #c4e1ff;
+
+$card-num-users-background-color: #272727;
+$card-ball-type-background-color: #272727;
+
 $primary-color: $primary;
 $secondary-color: $secondary;
 $normal-text-color: $content;
@@ -33,13 +29,12 @@ $notification-item-text-color: #d0d0d0;
 $notification-item-border-color: #e0e0e0;
 $input-placeholder-color: $input;
 $input-border-color: $input;
+$card-border-color: #6c6c6c;
 $menu-border-color: #6c6c6c;
 $notification-border-color: #6c6c6c;
 $error-color: $danger;
 
-// ======================================
-// sportsman\_sizes.scss
-// ======================================
+
 $header-height: 8vh;
 $menu-cancel-height: 8vh;
 $notification-cancel-height: 8vh;

@@ -5,6 +5,7 @@ import MatchingStatus from "./matching_status/MatchingStatus";
 import Reservation from "./reservation/Reservation";
 import ReservationCourtList from "./reservation/ReservationCourtList";
 import SignIn from "./sign_in/SignIn";
+import "./body.css";
 
 type BodyProps = {
     page: SportsmanPageName
@@ -12,7 +13,7 @@ type BodyProps = {
 
 const Body = (props: BodyProps) => {
     return (
-        <div>
+        <div className="sportsman-body">
             {
                 props.page === "home" ?
                     <div>
