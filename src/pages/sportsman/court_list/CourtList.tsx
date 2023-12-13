@@ -19,7 +19,13 @@ const CourtList = () => {
     return (
         <div className="sportsman-court-list">
             <div className="sportsman-court-list-title">球場資訊</div>
-            <CourtCard/>
+            <CourtCard
+                numUsers={1}
+                numMaxUsers={4}
+                ballTypeStr="羽球"
+                courtName="臺灣大學醉月湖湖心亭單挑"
+                distance={300}
+            />
         </div>
     );
 };
