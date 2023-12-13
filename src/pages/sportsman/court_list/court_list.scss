@@ -1,6 +1,7 @@
 @import "../../../_variables.scss";
 
 .sportsman-court-list {
+    overflow: auto;
     width: 100%;
     height: 92vh;
     background-color: $sportsman-background-color;
