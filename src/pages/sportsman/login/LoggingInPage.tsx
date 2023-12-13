@@ -15,7 +15,7 @@ const LoggingInPage = () => {
                     const data = res.data;
                     console.log(data);
                     const email = data.userInfo.email;
-                    const userId =  data.userInfo.id;
+                    const userId = data.userInfo.id;
                     window.localStorage.setItem("email", email);
                     window.localStorage.setItem(email, userId);
                     window.location.href = "http://localhost:3000/home";
@@ -23,7 +23,7 @@ const LoggingInPage = () => {
                     console.log(err);
                 });
         }
-    });
+    }, []);
 
     return (
         <Pager1 isLoggingIn={true}/>

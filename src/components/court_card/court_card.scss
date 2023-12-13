@@ -1,7 +1,7 @@
 @import "../../_variables.scss";
 
 .court-card {
-    margin: auto;
+    margin: auto auto 12px auto;
     width: 90%;
     border: 2px solid $court-card-border-color;
     border-radius: 20px;

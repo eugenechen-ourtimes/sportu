@@ -2,7 +2,7 @@ import "./court_card.scss";
 
 type CourtCardProps = {
     numUsers: number;
-    numMaxUsers: number;
+    capacity: number;
     ballTypeStr: string;
     courtName: string;
     distance: number;
@@ -27,7 +27,7 @@ const CourtCard = (props: CourtCardProps) => {
             <div className="court-card-middle">
                 <div className="court-card-space-1"/>
                 <div className="court-card-num-users">
-                    使用人數&ensp;{props.numUsers}/{props.numMaxUsers}
+                    使用人數&ensp;{props.numUsers}/{props.capacity}
                 </div>
                 <div className="court-card-space-2"/>
                 <div className="court-card-ball-type">

@@ -5,27 +5,37 @@ import CourtCard from "../../../components/court_card/CourtCard";
 import "./court_list.scss";
 
 const CourtList = () => {
-    const [courts, setCourts] = useState([]);
+    const [courtCards, setCourtCards] = useState<Array<JSX.Element>>([]);
 
     useEffect(() => {
         axios.get(`${BACK_END}/${VERSION}/spaces`)
             .then((res) => {
-                setCourts(res.data);
+                const courtCards = [];
+                const courts = res.data;
+                const n = courts.length;
+                for (let i = 0; i < n; i++) {
+                    const court = courts[i];
+                    courtCards.push(
+                        <CourtCard
+                            key={i}
+                            numUsers={1}
+                            capacity={court.capacity}
+                            ballTypeStr={court.ball_type.cht_game_name}
+                            courtName={court.name}
+                            distance={300}
+                        />
+                    );                    
+                }
+                setCourtCards(courtCards);
             }).catch((err) => {
                 console.log(err);
             });
-    });
+    }, []);
 
     return (
         <div className="sportsman-court-list">
             <div className="sportsman-court-list-title">球場資訊</div>
-            <CourtCard
-                numUsers={1}
-                numMaxUsers={4}
-                ballTypeStr="羽球"
-                courtName="臺灣大學醉月湖湖心亭單挑"
-                distance={300}
-            />
+            {courtCards}
         </div>
     );
 };
