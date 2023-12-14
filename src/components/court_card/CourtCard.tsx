@@ -5,16 +5,22 @@ type CourtCardProps = {
     capacity: number;
     ballTypeStr: string;
     courtName: string;
-    distance: number;
+    distance: number | null;
 };
 
 const CourtCard = (props: CourtCardProps) => {
-    const getDistanceStr = (distance: number) => {
+    const getDistanceStr = () => {
+        if (props.distance === null) {
+            return "N/A";
+        }
+
+        let distance = Math.round(props.distance);
         if (distance < 1000) {
             return "距離" + distance.toString() + "公尺";
-        } else {
-            return "距離" + (distance / 1000).toString() + "公里";
         }
+
+        distance /= 1000;
+        return "距離" + (Math.round((distance + Number.EPSILON) * 10) / 10).toString() + "公里";        
     };
 
     return (
@@ -46,7 +52,7 @@ const CourtCard = (props: CourtCardProps) => {
                     {props.courtName}
                 </div>
                 <div className="court-card-distance">
-                    {getDistanceStr(props.distance)}
+                    {getDistanceStr()}
                 </div>
             </div>
         </div>
