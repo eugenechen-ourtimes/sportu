@@ -10,7 +10,9 @@ const fetchDistance = async (
     lng: number
 ): Promise<number | null> => {
     try {
-        const response = await axios.get(`https://admin.chillmonkey.tw/v1/spaces/${courtId}/distance?lat=${lat}&lng=${lng}`);
+        const response = await axios.get(
+            `${BACK_END}/${VERSION}/spaces/${courtId}/distance?lat=${lat}&lng=${lng}`
+        );
         return response.data.distance;
     } catch (error) {
         console.log("fetchDistance", error);
