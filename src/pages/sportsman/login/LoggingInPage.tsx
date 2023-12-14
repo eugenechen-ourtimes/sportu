@@ -3,18 +3,19 @@ import { useLocation } from "react-router-dom";
 import axios from "axios";
 import Pager1 from "./Pager1";
 import { BACK_END, VERSION } from "../../../config";
-import { setBallTypeChtGameName } from "../../../utils/local_storage/localStorage";
+import { setSportId, setSportName } from "../../../utils/local_storage/localStorage";
 
 const LoggingInPage = () => {
     const location = useLocation();
-    const fetchBallTypesAndWriteToLocalStorage = async () => {
+    const fetchSportTypesAndWriteToLocalStorage = async () => {
         try {
             const response = await axios.get(`${BACK_END}/${VERSION}/spaces/sports`);
-            for (const ballType of response.data) {
-                setBallTypeChtGameName(ballType.type, ballType.cht_game_name);
+            for (const sport of response.data) {
+                setSportName(sport.type, sport.cht_game_name);
+                setSportId(sport.cht_game_name, sport.type);
             }
         } catch (error) {
-            console.log("fetchBallTypes");
+            console.log("fetchSportTypesAndWriteToLocalStorage");
         }
     };
 
@@ -26,7 +27,7 @@ const LoggingInPage = () => {
                 .then(async (res) => {
                     const data = res.data;
                     console.log(data);
-                    await fetchBallTypesAndWriteToLocalStorage();
+                    await fetchSportTypesAndWriteToLocalStorage();
                     const email = data.userInfo.email;
                     const userId = data.userInfo.id;
                     window.localStorage.setItem("email", email);

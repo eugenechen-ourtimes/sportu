@@ -1,14 +1,28 @@
 
-const BALL_TYPE = "ball-type-";
-export const setBallTypeChtGameName = (ballTypeNum: string, ballTypeChtGameName: string) => {
-    window.localStorage.setItem(BALL_TYPE + ballTypeNum, ballTypeChtGameName);
+const SPORT_ID = "sport-id-";
+export const setSportName = (sportId: string, sportName: string) => {
+    window.localStorage.setItem(SPORT_ID + sportId, sportName);
 };
 
-export const getBallTypeChtGameName = (ballTypeNum: string) => {
-    const ballTypeChtGameNameInDisk = window.localStorage.getItem(BALL_TYPE + ballTypeNum);
-    if (ballTypeChtGameNameInDisk === null) {
+export const getSportName = (sportId: string) => {
+    const sportName = window.localStorage.getItem(SPORT_ID + sportId);
+    if (sportName === null) {
         return "球";
     }
 
-    return ballTypeChtGameNameInDisk;
+    return sportName;
+};
+
+const SPORT_NAME = "sport-name-";
+export const setSportId = (sportName: string, sportId: string) => {
+    window.localStorage.setItem(SPORT_NAME + sportName, sportId);
+};
+
+export const getSportId = (sportName: string) => {
+    const sportId = window.localStorage.getItem(SPORT_NAME + sportName);
+    if (sportId === null) {
+        return "does_not_exist";
+    }
+
+    return sportId;
 };
