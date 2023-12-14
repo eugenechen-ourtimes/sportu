@@ -1,6 +1,6 @@
 import CourtDetails from "./court_list/CourtDetails";
 import CourtList from "./court_list/CourtList";
-import NearbyCourts from "./court_list/NearbyCourts";
+import Home from "./home/Home";
 import Map from "./map/Map";
 import MatchingStatus from "./matching_status/MatchingStatus";
 import Reservation from "./reservation/Reservation";
@@ -17,10 +17,7 @@ const Body = (props: BodyProps) => {
         <div className="sportsman-body">
             {
                 props.page === "home" ?
-                    <div>
-                        <Reservation/>
-                        <NearbyCourts/>
-                    </div>
+                    <Home/>
                     :
                     null
             }
