@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { BACK_END, VERSION } from "../../../config";
 import CourtCard from "../../../components/court_card/CourtCard";
+import { getBallTypeChtGameName } from "../../../utils/local_storage/localStorage";
 import "./court_list.scss";
 
 const fetchDistance = async (
@@ -41,7 +42,7 @@ const CourtList = () => {
                             key={i}
                             numUsers={1}
                             capacity={court.capacity}
-                            ballTypeStr={court.ball_type.cht_game_name}
+                            ballTypeChtGameName={getBallTypeChtGameName(court.type)}
                             courtName={court.name}
                             distance={distance}
                         />
