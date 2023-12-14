@@ -1,0 +1,50 @@
+@import "../../../_variables.scss";
+
+.sportsman-nearby-courts {
+    overflow: auto;
+    width: 100%;
+    height: 92vh;
+    background-color: $sportsman-background-color;
+}
+
+.sportsman-nearby-courts-space-1 {
+    height: 40px;
+}
+
+.sportsman-nearby-courts-space-2 {
+    height: 8px;
+}
+
+.sportsman-nearby-courts-space-3 {
+    height: 8px;
+}
+
+.sportsman-nearby-courts-title {
+    text-align: center;
+    color: $normal_text_color;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.sportsman-nearby-courts-select-sport-type-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    height: 40px;
+    font-size: 20px;
+}
+
+.sportsman-nearby-courts-select-sport-type {
+    color: $normal_text_color;
+    margin-right: 12px;
+}
+
+.sportsman-nearby-courts-selector {
+    margin-top: 3px;
+}
+
+.sportsman-nearby-courts-confirm {
+    margin-left: 12px;
+    margin-top: 2px;
+}

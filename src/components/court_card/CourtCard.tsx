@@ -3,7 +3,7 @@ import "./court_card.scss";
 type CourtCardProps = {
     numUsers: number;
     capacity: number;
-    ballTypeStr: string;
+    sportName: string;
     courtName: string;
     distance: number | null;
 };
@@ -36,8 +36,8 @@ const CourtCard = (props: CourtCardProps) => {
                     使用人數&ensp;{props.numUsers}/{props.capacity}
                 </div>
                 <div className="court-card-space-2"/>
-                <div className="court-card-ball-type">
-                    {props.ballTypeStr}場
+                <div className="court-card-sport-name">
+                    {props.sportName}場
                 </div>
                 <div className="court-card-space-3"/>
                 <button
