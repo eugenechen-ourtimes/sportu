@@ -80,7 +80,7 @@ const NearbyCourts = () => {
                     <option value="籃球">籃球</option>
                     <option value="排球">排球</option>
                     <option value="網球">網球</option>
-                    <option value="羽毛球">羽毛球</option>
+                    <option value="羽球">羽球</option>
                     <option value="桌球">桌球</option>
                     <option value="棒球">棒球</option>
                     <option value="足球">足球</option>
