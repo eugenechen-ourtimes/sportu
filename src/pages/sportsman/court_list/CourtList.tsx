@@ -40,7 +40,7 @@ const CourtList = () => {
                     newCourtCards.push(
                         <CourtCard
                             key={i}
-                            numUsers={1}
+                            numUsers={court.headcount}
                             capacity={court.capacity}
                             sportName={getSportName(court.type)}
                             courtName={court.name}

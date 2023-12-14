@@ -29,7 +29,7 @@ const NearbyCourts = () => {
                     newCourtCards.push(
                         <CourtCard
                             key={i}
-                            numUsers={1}
+                            numUsers={court.headcount}
                             capacity={court.capacity}
                             sportName={sportName}
                             courtName={court.name}
