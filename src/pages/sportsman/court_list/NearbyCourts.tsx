@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import axios from "axios";
 import { BACK_END, VERSION } from "../../../config";
 import CourtCard from "../../../components/court_card/CourtCard";
@@ -7,8 +7,7 @@ import "./nearby_courts.scss";
 
 const NearbyCourts = () => {
     const [courtCards, setCourtCards] = useState<Array<JSX.Element>>([]);
-    const sportName = "籃球";
-    const fetchCourtsAndUpdateDivs = (position: GeolocationPosition) => {
+    const fetchCourtsAndUpdateDivs = (position: GeolocationPosition, sportName: string) => {
         const uri = `${BACK_END}` +
                     `/${VERSION}` +
                     "/spaces/nearby?" +
@@ -19,9 +18,9 @@ const NearbyCourts = () => {
                     `sportId=${getSportId(sportName)}` +
                     "&" +
                     "count=3";
-        console.log("uri", uri);
+
         axios.get(uri)
-            .then(async (res) => {
+            .then((res) => {
                 const newCourtCards = [];
                 const courts = res.data;
                 const n = courts.length;
@@ -45,11 +44,13 @@ const NearbyCourts = () => {
             });
     };
 
-    useEffect(() => {
+    const handleConfirmSportType = () => {
+        const element = document.getElementById("sportsman-nearby-courts-selector") as HTMLSelectElement;
+        const sportName = element === null ? "籃球" : element.value;
         if (window.navigator.geolocation) {
             window.navigator.geolocation.getCurrentPosition(
                 (position) => {
-                    fetchCourtsAndUpdateDivs(position);
+                    fetchCourtsAndUpdateDivs(position, sportName);
                 },
                 (error) => {
                     console.log("getCurrentPosition", error);
@@ -57,12 +58,6 @@ const NearbyCourts = () => {
         } else {
             console.log("geolocation is not supported");
         }
-    }, []);
-
-    const handleConfirmSportType = () => {
-        const element = document.getElementById("sportsman-nearby-courts-selector") as HTMLSelectElement;
-        const value = element === null ? "籃球" : element.value;
-        console.log(value);
     };
 
     return (
