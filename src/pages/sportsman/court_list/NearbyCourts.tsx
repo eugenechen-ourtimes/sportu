@@ -55,13 +55,49 @@ const NearbyCourts = () => {
                     console.log("getCurrentPosition", error);
                 });
         } else {
-            console.log("geolocation is undefined");
+            console.log("geolocation is not supported");
         }
     }, []);
 
+    const handleConfirmSportType = () => {
+        const element = document.getElementById("sportsman-nearby-courts-selector") as HTMLSelectElement;
+        const value = element === null ? "籃球" : element.value;
+        console.log(value);
+    };
+
     return (
         <div className="sportsman-nearby-courts">
+            <div className="sportsman-nearby-courts-space-1"/>
             <div className="sportsman-nearby-courts-title">附近的球場</div>
+            <div className="sportsman-nearby-courts-space-2"/>
+            <div className="sportsman-nearby-courts-select-sport-type-wrapper">
+                <label
+                    className="sportsman-nearby-courts-select-sport-type"
+                    htmlFor="sport-types"
+                >
+                    選擇球種:
+                </label>
+                <select
+                    className="sportsman-nearby-courts-selector"
+                    name="sport-types"
+                    id = "sportsman-nearby-courts-selector"
+                >
+                    <option value="籃球">籃球</option>
+                    <option value="排球">排球</option>
+                    <option value="網球">網球</option>
+                    <option value="羽毛球">羽毛球</option>
+                    <option value="桌球">桌球</option>
+                    <option value="棒球">棒球</option>
+                    <option value="足球">足球</option>
+                </select>
+                <button
+                    className="sportsman-nearby-courts-confirm"
+                    onClick={handleConfirmSportType}
+                >
+                    確認
+                </button>
+            </div>
+            <div className="sportsman-nearby-courts-space-3"/>
             {courtCards}
         </div>
     );
