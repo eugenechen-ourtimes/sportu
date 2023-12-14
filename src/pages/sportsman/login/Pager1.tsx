@@ -30,13 +30,13 @@ const Pager1 = (props: Pager1Props) => {
                 alt="一起運動"
             />
             <div className="sportsman-pager-1-space-3"/>
-            <div className="sportsman-pager-1-log-in-wrapper">
+            <div className="sportsman-pager-1-login-wrapper">
                 {
                     props.isLoggingIn ?
                         <div className="sportsman-pager-1-logging-in">登入中</div>
                         :
                         <button
-                            className="sportsman-pager-1-log-in"
+                            className="sportsman-pager-1-login"
                             type="button"
                             onClick={handleLogin}
                         >
